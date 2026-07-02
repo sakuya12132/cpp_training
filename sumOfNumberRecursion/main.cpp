@@ -18,6 +18,6 @@ public:
 int main() {
 	sum sum;
 	int a = sum.fun(5);
-	std::cout << sum.count << "个自然数的总数是" << a;
+	std::cout << "The sum of" << sum.count << " natural numbers is" << a;
 
 }

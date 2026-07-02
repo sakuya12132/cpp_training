@@ -1,4 +1,3 @@
 ﻿  main.cpp
-D:\cpp_training\sumOfNumberRecursion\main.cpp(17,1): warning C4715: “sum::fun”: 不是所有的控件路径都返回值
   sumOfNumberRecursion.vcxproj -> D:\cpp_training\sumOfNumberRecursion\x64\Debug\sumOfNumberRecursion.exe
   D:\cpp_training\sumOfNumberRecursion\x64\Debug\sumOfNumberRecursion.exe: message: 正在部署依赖项

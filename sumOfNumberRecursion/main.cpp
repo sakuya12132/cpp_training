@@ -3,23 +3,21 @@
 class sum {
 public:
 	int count = 0;
-	int fun(int last_n) {
-		int n;
-		std::cin >> n;
+	int fun(int n) {
+		count++;
 		if (n == 0) {
-			return last_n;
+			return 0;
 		}
 		else {
-			count++;
+			int total = fun(n - 1) + n;
+			return total;
 		}
-		
-		fun(last_n + n);
 	}
 
 };
 int main() {
 	sum sum;
-	int a = sum.fun(0);
+	int a = sum.fun(5);
 	std::cout << sum.count << "个自然数的总数是" << a;
 
 }

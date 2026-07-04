@@ -17,7 +17,7 @@ public:
 		}
 		else {
 			return fun2(n - 1) * n;
-		}
+		} 
 	}
 	double fun3(int m,int n) {
 		if (n == 0) {

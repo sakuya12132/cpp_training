@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37216.2 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SizeCalculationFor4DArrays", "SizeCalculationFor4DArrays.vcxproj", "{EF5D5BB1-E308-4379-A7D4-6D7D2355286A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF5D5BB1-E308-4379-A7D4-6D7D2355286A}.Debug|x64.ActiveCfg = Debug|x64
+		{EF5D5BB1-E308-4379-A7D4-6D7D2355286A}.Debug|x64.Build.0 = Debug|x64
+		{EF5D5BB1-E308-4379-A7D4-6D7D2355286A}.Debug|x86.ActiveCfg = Debug|Win32
+		{EF5D5BB1-E308-4379-A7D4-6D7D2355286A}.Debug|x86.Build.0 = Debug|Win32
+		{EF5D5BB1-E308-4379-A7D4-6D7D2355286A}.Release|x64.ActiveCfg = Release|x64
+		{EF5D5BB1-E308-4379-A7D4-6D7D2355286A}.Release|x64.Build.0 = Release|x64
+		{EF5D5BB1-E308-4379-A7D4-6D7D2355286A}.Release|x86.ActiveCfg = Release|Win32
+		{EF5D5BB1-E308-4379-A7D4-6D7D2355286A}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75C422D7-8A51-477D-970D-D01BAA15072B}
+	EndGlobalSection
+EndGlobal

@@ -9,6 +9,7 @@ struct Data {
 //展示
 void Display(struct Data data) {
 	int i;
+	printf("数组里的数字依次是:\n");
 	for (i = 0; i < data.Length; i++) {
 		printf("%d\n", data.A[i]);
 	}
@@ -34,6 +35,18 @@ void Add(struct Data *data,int n) {
 	(*data).Length++;
 	(*data).A[(*data).Length-1] = n;
 }
+void Search(struct Data *data,int n) {
+	int i;
+	for (i = 0; i < ((*data).Length); i++) {
+		if ((*data).A[i] == n) {
+			printf("找到了%d，在索引为%d的位置\n", n, i);
+			break;
+		}
+		if (i == ((*data).Length) - 1 && (*data).A[i] != n) {
+			printf("没有找到%d", n);
+		}
+	}
+}
 int main() {
     Data data;
     data.A[0] = 12; data.A[1] = 11; data.A[2] = 13; data.A[3] = 4;
@@ -41,5 +54,7 @@ int main() {
     data.size = 10;
 	Add(&data, 8);
 	Insert(&data, 2, 432);
+	Search(&data, 11);
+	Search(&data, 32);
 	Display(data);
 }

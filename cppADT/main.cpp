@@ -35,21 +35,33 @@ void Add(struct Data *data,int n) {
 	(*data).Length++;
 	(*data).A[(*data).Length-1] = n;
 }
+//交换
+void Swap(struct Data* data, int i1,int i2) {
+	int temp;
+	temp = (*data).A[i1];
+	(*data).A[i1] = (*data).A[i2];
+	(*data).A[i2] = temp;
+}
+//查找
 void Search(struct Data *data,int n) {
 	int i;
+	int FindNum=0;
 	for (i = 0; i < ((*data).Length); i++) {
 		if ((*data).A[i] == n) {
 			printf("找到了%d，在索引为%d的位置\n", n, i);
-			break;
+			Swap(data, i, i-1);
+			FindNum++;
 		}
-		if (i == ((*data).Length) - 1 && (*data).A[i] != n) {
+	
+		
+		if (i == ((*data).Length) - 1 && (*data).A[i] != n && FindNum == 0) {
 			printf("没有找到%d", n);
 		}
 	}
 }
 int main() {
     Data data;
-    data.A[0] = 12; data.A[1] = 11; data.A[2] = 13; data.A[3] = 4;
+    data.A[0] = 12; data.A[1] = 11; data.A[2] = 11; data.A[3] = 4;
     data.Length = 4;
     data.size = 10;
 	Add(&data, 8);

@@ -1,0 +1,100 @@
+﻿#include<iostream>
+//����ṹ��
+struct Data {
+	int A[10];
+	int size;
+	int Length;
+
+};
+//展示
+void Display(struct Data data) {
+	int i;
+	printf("打印的数组是:\n");
+	for (i = 0; i < data.Length; i++) {
+		printf("%d\n", data.A[i]);
+	}
+}
+//插入
+void Insert(struct Data* data, int index, int n) {
+	int i;
+	for (i = (*data).Length; i > index; i--) {
+		(*data).A[i] = (*data).A[i - 1];
+	}
+	(*data).A[index] = n;
+}
+//删除
+void Delete(struct Data* data, int index) {
+	int i;
+	for (i = index; i < (*data).Length - 1; i++) {
+		(*data).A[i] = (*data).A[i + 1];
+	}
+	(*data).Length--;
+}
+//末尾添加
+void Add(struct Data* data, int n) {
+	(*data).Length++;
+	(*data).A[(*data).Length - 1] = n;
+}
+//交换
+void Swap(struct Data* data, int i1, int i2) {
+	int temp;
+	temp = (*data).A[i1];
+	(*data).A[i1] = (*data).A[i2];
+	(*data).A[i2] = temp;
+}
+//线性搜索
+void Search(struct Data* data, int n) {
+	int i;
+	int FindNum = 0;
+	for (i = 0; i < ((*data).Length); i++) {
+		if ((*data).A[i] == n) {
+			printf("找到了%d，在索引为%d的位置\n", n, i);
+			Swap(data, i, i - 1);
+			FindNum++;
+		}
+
+
+		if (i == ((*data).Length) - 1 && (*data).A[i] != n && FindNum == 0) {
+			printf("没有找到%d", n);
+		}
+	}
+}
+//二分搜索
+int BinarySezrch(struct Data data, int key) {
+	int l, n, mid;
+	l = 0;
+	n = data.Length - 1;
+	while (true) {
+		mid = (l + n) / 2;
+		if (l > n) {
+			printf("找不到该数字\n");
+			return -1;
+		}
+		if (key > data.A[mid]) {
+			l = mid + 1;
+		}
+		else if (key < data.A[mid]) {
+			n = mid - 1;
+		}
+		else if (key == data.A[mid]) {
+			printf("这个数字在索引%d的位置\n", mid);
+			return mid;
+		}
+	}
+	
+}
+int main() {
+	Data data;
+	Data arr;
+	arr.A[0] = 1; arr.A[1] = 2; arr.A[2] = 3; arr.A[3] = 4;
+	arr.Length = 4;
+	arr.size = 10;
+	data.A[0] = 12; data.A[1] = 11; data.A[2] = 11; data.A[3] = 4;
+	data.Length = 4;
+	data.size = 10;
+	Add(&data, 8);
+	Insert(&data, 2, 432);
+	int b = BinarySezrch(arr, 4);
+	
+	Display(data);
+}

@@ -6,6 +6,7 @@ struct matrix {
 	double* data;
 };
 void Set(struct matrix* m, int r, int c, double n) {
+	// 建议增加边界检查，防止越界访问
 	if (r < 1 || r > m->rows || c < 1 || c > m->cols) {
 		return;
 	}

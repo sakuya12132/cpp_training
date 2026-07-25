@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\cpp_training\StringVowelsAndConsonants\main.cpp(8,10): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  StringVowelsAndConsonants.vcxproj -> D:\cpp_training\StringVowelsAndConsonants\x64\Debug\StringVowelsAndConsonants.exe
+  D:\cpp_training\StringVowelsAndConsonants\x64\Debug\StringVowelsAndConsonants.exe: message: 正在部署依赖项

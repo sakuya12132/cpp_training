@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\cpp_training\sparse metrices addition\main.cpp(16,6): warning C4101: “x”: 未引用的局部变量
+  sparse metrices addition.vcxproj -> D:\cpp_training\sparse metrices addition\x64\Debug\sparse metrices addition.exe
+  D:\cpp_training\sparse metrices addition\x64\Debug\sparse metrices addition.exe: message: 正在部署依赖项
